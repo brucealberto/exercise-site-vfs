@@ -1,0 +1,49 @@
+@mixin banners-promocionais($cor, $url-image, $size) {
+  background-color: $cor;
+  background-image: url($url-image);
+  //blog da trybe
+  background-size: $size;
+}
+
+.banners-promocionais-statico {
+  margin-top: 30px;
+
+  .banners-promocionais-statico-12x {
+    @include banners-promocionais($rosa, '../images/parcele-em-12x.jpg', cover);
+  }
+
+  .banners-promocionais-statico-todo-br {
+    @include banners-promocionais($roxo, '../images/entrega-para-todo-brasil.jpg', cover);
+  }
+
+  .banners-promocionais-statico-12x,
+  .banners-promocionais-statico-todo-br {
+    height: 105px;
+    color: $branco;
+    padding: 20px;
+  }
+
+  svg,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  svg {
+    width: 50px;
+    height: 50px;
+    // Bruce
+    margin-left: 20px;
+  }
+
+  p {
+    font-size: 23px;
+    font-weight: 100;
+    line-height: 110%;
+    margin-left: 20px;
+
+    strong {
+      font-weight: bold;
+    }
+  }
+}

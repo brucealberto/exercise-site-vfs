@@ -1,0 +1,53 @@
+nav.nav-produtos {
+  background: $cor-secundaria;
+  color: $branco;
+
+  a {
+    color: $branco;
+  }
+
+  ul.nav {
+
+
+    li {
+      position: relative;
+      padding: 10px;
+      width: 150px;
+
+      // alterei o width na aula 17 parte 2 (criar site do zero)
+      // e tirei o atributo col-md-2 da li
+
+      svg {
+        // margin-right: 4px;
+        width: 23px;
+        height: 23px;
+      }
+
+      &:hover {
+        background: darken($color: $cor-secundaria, $amount: 30);
+
+        ul.nav {
+          display: block;
+        }
+      }
+
+      ul.nav {
+        z-index: 999;
+        display: none;
+
+        position: absolute;
+        top: 44px;
+        left: 0;
+
+        border-top: solid $cor-primaria 10px;
+        background: $cor-secundaria;
+
+        width: 100%;
+
+        li {
+          padding: 10px 25px;
+        }
+      }
+    }
+  }
+}

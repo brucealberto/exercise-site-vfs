@@ -1,0 +1,45 @@
+header {
+  background: $cor-primaria;
+  padding: 25px;
+
+  form {
+    input[type="text"] {
+      background: $branco;
+      width: 100%;
+      border-radius: 100px;
+      border: none;
+      padding: 10px 20px;
+      outline: none;
+    }
+
+    button {
+      background: none;
+      border: none;
+      position: relative;
+      right: 40px;
+    }
+  }
+
+  ul {
+    li {
+      position: relative;
+
+      span.notificacao {
+        position: absolute;
+        top: -15px;
+        left: 1px;
+      }
+
+      a {
+        font-size: 16px;
+        font-weight: bold;
+        color: $cor-secundaria;
+
+        svg {
+          width: 23px;
+          height: 23px;
+        }
+      }
+    }
+  }
+}
